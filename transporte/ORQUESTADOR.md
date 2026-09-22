@@ -70,6 +70,9 @@ el reporte y respuestas exactas en archivos locales fuera de Git; esos archivos 
 información del trabajo y no se publican automáticamente. Nunca incluir valores secretos.
 
 Estado runtime: handles, último turno aceptado, respuesta/sobre pendiente, stop_requested y
-fallo/recibo de entrega. No es autoridad sobre trabajo. Esta entrega es en memoria; reiniciar el
-proceso requiere recuperación externa y no autoriza reutilizar automáticamente un turno.
+fallo/recibo de entrega. No es autoridad sobre trabajo. Session mantiene estado en memoria; el [host local](LOCAL.md) lo persiste con recibos de
+operaciones. Usar su recuperación; reiniciar Session desde cero no autoriza repetir un turno.
 No hay dashboard, base de pases ni contadores de unidades dentro del transporte.
+
+Implementación operativa: seguir [LOCAL.md](LOCAL.md). Las capturas y comparaciones las hace
+el programa; el orquestador atiende operaciones del mailbox y comunica resultados.

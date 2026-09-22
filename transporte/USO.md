@@ -49,3 +49,8 @@ No hay reanudación de proceso ni guardado durable del loop en esta entrega.
 Pasar next_prompt a otra llamada mediante una transcripción del modelo no cumple el contrato.
 El host debe conectar prepare con la variable recibida por código. Sin adaptadores reales
 verificados, este paquete es un núcleo probado y una especificación, no un loop operativo.
+
+## Interfaces reales
+
+Para la ejecución con ChatGPT web y Claude Code ver [LOCAL.md](LOCAL.md).
+El CLI de este documento conserva su función de validación offline.

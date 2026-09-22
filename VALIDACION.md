@@ -46,3 +46,14 @@ Conectar adaptadores en el entorno aprobado y demostrar transferencia directa de
 original, identidad de instancias, fin de respuesta y comportamiento ante envíos inciertos.
 Después implementar el alcance de procedimientos/CONTINUIDAD.md. Esta validación no autoriza
 usar el núcleo como si esos pasos ya estuvieran completados.
+
+## Transporte local reutilizable
+
+Agregados tests de diario de operaciones: entrega confirmada no repetida, mutación interrumpida
+no repetida, divergencia de reproducción, persistencia de Session, identidad CLI, bytes UTF-8
+y cierre sin envío. Tests Node del puente: fresh, claim de envío persistido y current incorrecto.
+
+Ejecutar `python -m unittest discover -s tests -v` y `node --test tests/test_browser.mjs`.
+La prueba real previa completó auditor→constructor→auditor con cierre recuperado. La versión
+generalizada requiere verificación local de fresh/current, señales UI y permisos; no se afirma
+que los tests simulados hayan ejecutado esos escenarios reales.

@@ -1,7 +1,8 @@
 # Contrato del adaptador
 
-Un adaptador conecta el núcleo con una interfaz concreta. Esta entrega usa simulaciones en tests;
-no incluye automatización real de ChatGPT web ni de Claude Code.
+Un adaptador conecta el núcleo con una interfaz concreta. El host de referencia está en
+[LOCAL.md](LOCAL.md): Claude Code local y ChatGPT mediante un runtime CUA autorizado.
+Las pruebas automatizadas usan dobles; la conexión final se verifica en la computadora del usuario.
 
 | Operación | Propiedad exigida |
 |---|---|

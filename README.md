@@ -20,10 +20,11 @@ Los roles consultan directamente los documentos enlazados. Este README es un ín
 
 El núcleo Python, sin dependencias externas, valida sobres, conserva respuestas originales,
 prepara texto, verifica integridad, limita reintentos seguros y produce reportes de fallas.
-Incluye transporte mediante una interfaz de adaptador y pruebas con adaptadores simulados.
-No incluye un adaptador operativo de ChatGPT web ni de Claude Code: su funcionamiento real
-debe verificarse en el entorno donde se conecte. Luna puede operar esas interfaces, pero no
-debe regenerar el contenido que las funciones de código ya recibieron.
+Incluye un [host local reutilizable](transporte/LOCAL.md) con adaptadores para Claude Code y
+ChatGPT mediante el runtime CUA autorizado. Rutas, identidades y permisos son configurables;
+los recibos y las capturas se conservan en disco para evitar reenvíos al recuperar una ejecución.
+La integración concreta se comprueba en la computadora que ejecuta el circuito. Luna puede
+operar las interfaces, sin regenerar los textos que ya recibió el código.
 
 ```text
 python -m unittest discover -s tests -v
